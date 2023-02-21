@@ -1,0 +1,390 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{ margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; color: inherit; }
+body { background-color: #f6f6f6; font-family: 'NotoSans KR',sans-serif; }
+
+// inner
+div.inner { width: 1200px; margin: 0 auto; position: relative; padding: 50px 0; box-sizing: border-box;}
+
+div.util_wrap {
+  width: 100%; height: 30px; background-color: #666; border-bottom: 5px solid #029ec3;
+  #util {
+    width: 1200px; height: 30px; display: flex; justify-content: right; margin: 0 auto;
+    .rightmenu {
+      width: 500px; display: flex; align-items: center; justify-content: space-between; font-size: 14px; font-weight: bold;
+      ul {
+        display: flex; width: 400px; justify-content: space-between;
+        li {
+          color: #fcfcfc;
+        }
+      }
+      div.lang {
+        width: 60px; height: 25px; background-color: #d4d4d4; border: 1px solid #808080; box-sizing: border-box;
+        a {
+          width: 60px; height: 25px; display: block; color: gray; text-align: center; font-size: 14px; line-height: 25px;
+        }
+      }
+    }
+  }
+}
+
+div#header {
+  width: 100%; height: 100px; position: relative; z-index: 20;
+  > div.inner {
+    display: flex; justify-content: space-between; border-bottom: 1px solid #d4d4d4; padding: 0; box-sizing: border-box; 
+  }
+  h1 {
+      margin: 39px 80px 39px 0;
+    img {
+      width: 120px; height: 22px; display: block;
+    }
+  }
+  div.nav {
+    width: 800px; display: flex; align-items: center;justify-content: space-between;
+    ul.gnb {
+      display: flex; width: 800px; justify-content: space-between;
+      > li {
+        font-size: 15px; font-weight: 900; color: #333; width: 114.28px; text-align: center;
+        > a {
+          display: block; height: 100%;
+        }
+        div.submenu {
+          width: 100%; height: 250px; position: absolute; top: 100px; left: 0; border-bottom: 1px solid #029ec3; background-color: #fff; display: none;z-index: 99;
+          div.sublayer {
+            width: 800px; margin: 0 auto; height: 100%;
+            display: flex; justify-content: left;
+            padding: 25px 0; box-sizing: border-box;
+            
+            > ul {
+              text-align: center; font-size: 13px;
+              width: 114.28px; box-sizing: border-box;
+              border-right: 1px solid #d4d4d4; font-weight: 600; line-height: 1.6;
+              &:nth-of-type(1) {
+                border-left: 1px solid #d4d4d4;
+              }
+              >li {
+                height: 25px; line-height: 25px;
+                &:hover{
+                  a {
+                    background-color: #029ec3; color: #f6f6f6;
+                  }
+                }
+                a{
+                  display: block; transition: .5s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  div.right {
+    margin: 30.5px 0 30.5px 88px;
+    img { width: 112px; height: 29px;}
+  }
+}
+
+div#main_slider {
+  width: 100%; height: 475px;
+  .main_swiper {
+    width: 100%; height: 100%;
+    img {
+      width: 100%; height: auto;
+    }
+    .swiper-button-next {
+      right: 13%;
+    }
+    .swiper-button-prev {
+      left: 13%;
+    }
+  }
+}
+
+div#brand {
+  height: 500px;
+  div.inner {
+    border-bottom: 1px solid #029ec3; box-sizing: border-box; 
+  }
+  h2 {
+    text-align: center; line-height: 40px;
+  }
+  div.conts {
+    width: 100%; height: 300px; margin-top: 60px; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center;
+    div.slide_wrap {
+      width: 424px; height: 272px;
+      div.brand_swiper {
+        width: 900px; height: 272px; overflow: hidden;
+        .swiper-button-next {
+          width: 50px; height: 50px; border: 3px solid #029ec3; border-radius: 15px; color: #029ec3; background-color: #fff; transition: .5s;
+          &::after {
+            font-size: 30px; font-weight: 900;
+          }
+          &:hover {
+            background-color: #029ec3; color: #fff;
+          }
+        }
+        .swiper-button-prev {
+          width: 50px; height: 50px; border: 3px solid #029ec3; border-radius: 15px; color: #029ec3; background-color: #fff; transition: .5s;
+          &::after {
+            font-size: 30px; font-weight: 900;
+          }
+          &:hover {
+            background-color: #029ec3; color: #fff;
+          }
+        }
+        div.swiper-wrapper {
+          width: 424px; height: 272px;
+          div.swiper-slide {
+            img { width: 424px; height: 272px;}
+          }
+        }
+      }
+    }
+  }
+  div.contents {
+    width: 200px; height: 300px;
+    p {
+      font-size: 20px; font-weight: 700; margin-bottom: 30px; height: 84px;
+    }
+    a {
+      display: block;  width: 200px; height: 50px; border: 1.5px solid #029ec3; box-sizing: border-box; text-align: center; line-height: 50px; font-size: 14px; transition: .5s; color: #029ec3;
+      font-weight: 700; border-radius: 5px;
+      &:nth-of-type(1){
+        margin-bottom: 15px;
+      }
+      &:nth-of-type(2){
+        margin-bottom: 15px;
+      }
+      
+      &:hover {
+        background-color: #029ec3; color: #fff;
+      }
+    }
+  }
+}
+
+div#product {
+  height: 630px;
+  .search {
+    width: 840px; height: 50px; display: flex; justify-content: space-between;  margin: 0 auto;
+    input {
+      width: 710px; height: 100%; padding: 10px; box-sizing: border-box;
+    }
+    div {
+      width: 100px; font-size: 14px; height: 50px;
+      a {
+        display: block; text-align: center; background-color: #029ec3; width: 100%; height: 100%; line-height: 50px; color: #fff; border-radius: 2px;
+        i {
+          margin-left: 10px; font-size: 18px;
+        }
+      }
+    }
+  }
+  .conts {
+    width: 1200px; height: 400px; margin-top: 80px; display: flex; justify-content: space-between;
+    > div {
+      padding: 30px 75px; box-sizing: border-box; width: 590px; height: 400px; 
+    }
+    div.product {
+      position: relative;
+      &::after {
+        content: ""; display: block; width: 1.2px; height: 400px; background-color: #029ec3; position: absolute; right: -10px; top: 0;
+      }
+      
+      h3 {
+        margin-bottom: 5px; font-size: 20px;
+      }
+      p {
+        font-size: 14px; color: #808080; margin-bottom: 34px;
+      }
+      .product_swiper {
+        width: 440px; height: 170px; overflow: hidden;  box-sizing: border-box;
+        .swiper-pagination {
+          position: absolute; top: 62px; width: auto !important; left: auto !important; right: 75px; height: 30px;
+        }
+        .swiper-pagination-bullet-active {
+          background-color: #029ec3;
+        }
+
+        .swiper-button-next {
+          width: 40px; height: 40px; border: 3px solid #029ec3; border-radius: 15px; color: #029ec3; background-color: #fff; transition: .3s;
+          &::after {
+            font-size: 25px; font-weight: 900;
+          }
+          &:hover {
+            background-color: #029ec3; color: #fff;
+          }
+        }
+        .swiper-button-prev {
+          width: 40px; height: 40px; border: 3px solid #029ec3; border-radius: 15px; color: #029ec3; background-color: #fff; transition: .3s;
+          &::after {
+            font-size: 25px; font-weight: 900;
+          }
+          &:hover {
+            background-color: #029ec3; color: #fff;
+          }
+        }
+        .swiper-wrapper {
+          width: 440px; height: 170px;
+          div.swiper-slide {
+            a {
+              display: block; width: 100%; height: 100%;
+              img {
+                width: 440px; height: 170px;
+              }
+            }
+          }
+        }
+      }
+      div.bot {
+        position: absolute; bottom: 30px; right: 75px; font-size: 15px; width: 440px; height: 30px; line-height: 30px;
+        a {
+          display: block; position: absolute;
+          right: 0; bottom: 0; color: #029ec3; font-weight: 700; border-bottom: 1px solid #029ec3; height: 28px;
+        }
+        
+      }
+    }
+    div.promotion {
+      position: relative;
+      h3 {
+        margin-bottom: 5px; font-size: 20px;
+      }
+      p {
+        font-size: 14px; color: #808080;
+      }
+      div.youtube {
+        width: 440px; margin-top: 40px; height: 250px; text-align: center; line-height: 250px;
+      }
+      div.sns {
+        width: 150px; display: flex; justify-content: space-between; position: absolute; top: 62px; right: 75px;
+        a {
+          width: 30px; height: 30px; display: block;
+          img {
+            display: block; width: 100%; height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+div#news {
+  margin-bottom: 50px;
+  div.conts_box {
+    width: 1200px; border: 2px solid #029ec3; box-sizing: border-box; display: flex; height: 250px; 
+    box-shadow: 0 0 10px lightgray;
+    > div {
+      width: calc(100%/3);
+      padding: 30px 20px; position: relative;
+      &:nth-of-type(2) {
+        background: url(../img/find.png) no-repeat center/cover;
+      }
+      &:nth-of-type(3) {
+        background: url(../img/society.png) no-repeat center/cover;
+      }
+      h3 {
+        margin-bottom: 30px; font-size: 20px;
+      }
+    }
+    div.news {
+      ul {
+        li {
+          font-size: 14px; line-height: 1.5; position: relative; width: 100%; height: 26px;
+          a {
+            display: inline-block;
+            width: 290px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            &:hover{
+              text-decoration: underline; color: #029ec3;
+              span {
+                text-decoration: underline;
+              }
+            }
+          }
+          span {
+            position: absolute; right: 0; top: 0;
+          }
+        }
+      }
+      > a {
+        position: absolute; top: 30px; right: 20px;
+        &:hover {
+          color: #029ec3;
+        }
+      }
+    }
+    div.find, div.society {
+      border-left: 2px solid #029ec3; box-sizing: border-box;
+      h3 {
+        margin-bottom: 30px;
+      }
+      p {
+        line-height: 1.5; font-size: 24px; color: #ffee8e; font-weight: 900;
+      }
+      a {
+        position: absolute; bottom: 30px; right: 20px;
+        width: 100px; height: 40px; line-height: 40px; text-align: center; border-radius: 3px; box-sizing: border-box; transition: .5s;
+        background-color: #029ec3; color: #fff;
+        &:hover {
+          background-color: rgba($color: #333, $alpha: .5); width: 100%; height: 100%; right: 0; bottom: 0; text-align: center; line-height: 250px;
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  width: 100%; background-color: #f6f6f6; color: #444;
+  border-top: 1px solid #029ec3; box-sizing: border-box; padding: 20px 0;
+  div.inner {
+    padding: 0;
+    div.top {
+      display: flex; justify-content: space-between; height: 80px; align-items: center; width: 1000px; margin: 0 auto;
+      div.menu {
+        width: 180px; font-size: 12px; display: flex; justify-content: space-between;
+        span {
+          display: block;position: relative;
+          &:hover {
+            color: #029ec3; text-decoration: underline;
+          }
+          &:nth-child(1):after {
+            content: ""; display: block; width: 1px; height: 16px; background-color: #444; position: absolute; right: -12px; top: 0;
+          }
+        }
+      }
+      div.footer_img {
+      height: 60px; width: 300px;
+      img {
+        height: 60px; width: 60px;
+        &:nth-of-type(3) {
+          width: 96px;
+          }
+        }
+      }
+      div.family {
+        width: 200px; display: flex; justify-content: space-between;
+        select {
+          width: 95px; height: 30px;
+        }
+      }
+    }
+    div.mid {
+      h2 {
+        padding: 21.5px 0; width: 85px; height: 17px; margin: 0 auto;
+        img {
+          width: 85px; height: 17px; display: block;
+        }
+      }
+    }
+    div.add {
+      text-align: center; font-size: 14px; color: #444;
+    }
+  }
+}
