@@ -329,11 +329,10 @@ div#news {
         line-height: 1.5; font-size: 24px; color: #ffee8e; font-weight: 900;
       }
       a {
-        position: absolute; bottom: 30px; right: 20px;
-        width: 100px; height: 40px; line-height: 40px; text-align: center; border-radius: 3px; box-sizing: border-box; transition: .5s;
-        background-color: #029ec3; color: #fff;
+        width: 100%; height: 100%; box-sizing: border-box; transition: .5s; background-color: rgba($color: #333, $alpha: .5); line-height: 250px;
+        color: #fff; display: block; position: absolute; right: 0; top: 0; text-align: center;
         &:hover {
-          background-color: rgba($color: #333, $alpha: .5); width: 100%; height: 100%; right: 0; bottom: 0; text-align: center; line-height: 250px;
+          opacity: 0;
         }
       }
     }
